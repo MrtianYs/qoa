@@ -1,5 +1,5 @@
 <h1 align="center">
-  Qoa
+  Qoa-extra
 </h1>
 
 <h4 align="center">
@@ -74,6 +74,7 @@ Import qoa and start using any of the available prompts:
 - `hidden`
 - `input`
 - `interactive`
+- `multiple`
 - `keypress`
 - `quiz`
 - `secure`
@@ -252,6 +253,36 @@ qoa.interactive(interactive).then(log);
 <div align="center">
   <img alt="Interactive Prompt" src="media/interactive.gif" width="68%">
 </div>
+###  Multiple Prompt (extra)
+
+It is used in a similar way to Interactive prompt, press "space" to select opts
+
+```javascript
+const qoa = require('qoa');
+
+const {log} = console;
+
+// press 'space' to select opts
+const multiple = {
+  type: 'multiple',
+  query: 'What is your favorite treat?',
+  handle: 'treat',
+  symbol: '>',
+  menu: [
+    'Chocolate',
+    'Cupcakes',
+    'Ice-Cream'
+  ]
+};
+
+// using the `prompt` async method
+qoa.prompt([multiple]).then(log);
+//=> { treat: ['Cupcakes'] }
+
+// using the `interactive` async method
+qoa.interactive(multiple).then(log);
+//=> { treat: ['Cupcakes'] }
+```
 
 ### Keypress Prompt
 
