@@ -15,8 +15,6 @@ let ops = {
 
 Qoa.prompt([ops]).then(console.log);
 
-Qoa.multiple(ops).then(console.log);
-
 // press 'space' to select
 // > (●) Chocolate
 //   ( ) Cupcakes

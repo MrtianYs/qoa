@@ -17,7 +17,7 @@ class Multiple extends Nav {
 
   get _menuItems() {
     return this._menu.map((x, i) => {
-      if (this._selectedIdx.includes(i) > -1) {
+      if (this._selectedIdx.indexOf(i) > -1) {
         return `  ${this._idx === i ? `${this._symbol}` : `${this._whitespace(this._symbol.length)}`} ${this._formatItem.selected(x)}`;
       }
 
@@ -26,7 +26,7 @@ class Multiple extends Nav {
   }
 
   _selectItem() {
-    const idx = this._selectedIdx.includes(this._idx);
+    const idx = this._selectedIdx.indexOf(this._idx);
     if (idx > -1) {
       this._selectedIdx.splice(idx, 1);
     } else {
