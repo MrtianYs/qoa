@@ -1,6 +1,6 @@
 {
   "name": "qoa-extra",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Minimal interactive command-line prompts",
   "license": "MIT",
   "repository": "klaussinani/qoa",
